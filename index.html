@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Jeremy Raven - Home</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.105.1/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.105.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div id="JeremyRaven">Jeremy Raven</div>
+        <div id="Skills">Special FX and 3D Motion Graphics Artist</div>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><button class="custom-button" id="home-nav-Button">Home</button></li>
+                <li><button class="custom-button" id="about-nav-Button">About</button></li>
+                <li><button class="custom-button" id="lab-nav-Button">Laboratory</button></li>
+                <li><button class="custom-button" id="contact-nav-Button">Contact</button></li>
+            </ul>
+          </nav>
+          <a href="mailto:info@jeremyraven.nz" class="email-link">info@jeremyraven.nz</a>
+          <div class="weatherAPI">
+            <div class="weatherAPI-content">
+                <img id="conditionIcon" src="" alt="Condition Icon">
+                <div id="location"></div>
+                <div id="conditionText1"></div>
+                <div id="conditionText2"></div>
+            </div>
+          </div>
+    </header>
+
+    <div id="homeContainer" class="homeContainer">
+      <div id="HomeBlurb"></div>
+      <div id="techUsed">Technologies: Cesium Geospatial Platform, Canvas2D, WeatherAPI</div>
+      <img src="/images/mouse.gif" alt="Mouse" id="mouseImage">
+    </div>
+    
+    <div id="aboutContainer" class="aboutContainer">
+      <h1>Key skills & interests</h1>
+      <div id="AboutBlurb"></div>
+    </div>
+
+    <div id="logoContainer" class="logoContainer">
+      <div class="image-button">
+        <img src="/images/cesium_logo.png" alt="cesium-logo" class="logo" id="cesium-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Geospatial Data Representation</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/Maya_logo.png" alt="maya-logo" class="logo"  id="maya-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">3D Animation & Motion Graphics</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/reality_comp_logo.png" alt="realComp-logo" class="logo"  id="realComp-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Augmented Reality</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/html_logo.png" alt="html_logo." class="logo"  id="html_logo.">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Website Creation</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/javascript_logo.png" alt="cjavascript_logo" class="logo" id="javascript_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Website Animation</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/CCS_logo.png" alt="maya-logo" class="logo"  id="maya-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Website Styling</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/AfterEffect_logo" alt="AfterEffect-logo" class="logo" id="AfterEffect-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">2D Motion Graphics</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/photoshop.png" alt="photoshop-logo" class="logo"  id="photoshop-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Bitmap 2D Effects</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/illustrator.png" alt="illustrator-logo" class="logo"  id="illustrator-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Vector Design</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/indesign.png" alt="indesign-logo" class="logo" id="indesign-logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Page Layout</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/soup-dev_logo.png" alt="soup-dev_logo" class="logo"  id="soup-dev_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">3D Procedural Toolset</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/threejs_logo.png" alt="threejs_logo" class="logo"  id="threejs_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Online 3D Creation</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/WebXR_logo.png" alt="WebXR_logo" class="logo" id="WebXR_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Online Augmented Reality</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/Swift_logo.png" alt="Swift_logo" class="logo" id="Swift_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Apple Technology</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/Arnold_logo.png" alt="cArnold_logo" class="logo" id="Arnold_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Physically Based Rendering - Maya</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/Vray_logo.png" alt="Vray_logo" class="logo" id="Vray_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Physically Based Rendering</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/metashape_logo.png" alt="metashape_logo" class="logo" id="metashape_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Photogrammetry</div>
+        </div>
+      </div>
+
+      <div class="image-button">
+        <img src="/images/python_logo.png" alt="python_logo" class="logo" id="python_logo">
+        <div class="popup"> 
+          <img src="./images/speech_bubble.png" alt="speech bubble" class="speech-bubble">
+          <div class="speechText">Python programming</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="labContainer" class="labContainer">
+      <button class="labButtons highlighted" data-display-id="augmentedDisplay">Augmented Reality</button>
+      <button class="labButtons" data-display-id="geospatialDisplay">Geospatial Tech</button>
+      <button class="labButtons" data-display-id="motionDisplay">3D Motion Graphics</button>
+      <button class="labButtons" data-display-id="illustrationDisplay">Illustration</button>
+      <div class="imageDisplay" id="augmentedDisplay">
+        <img src='./images/Aug_01.png' alt='Image 1'>
+        <img src='./images/Aug_02.png' alt='Image 2'>
+        <img src='./images/Aug_03.png' alt='Image 3'>
+      </div>
+      <div class="imageDisplay" id="geospatialDisplay">
+        <img src='./images/Geo_01.png' alt='Image 4'>
+        <img src='./images/Geo_02.png' alt='Image 5'>
+        <img src='./images/Geo_03.png' alt='Image 6'>
+      </div>
+      <div class="imageDisplay" id="motionDisplay">
+        <img src='./images/Mot_01.png' alt='Image 7'>
+        <img src='./images/Mot_02.png' alt='Image 8'>
+        <img src='./images/Mot_03.png' alt='Image 9'>
+      </div>
+      <div class="imageDisplay" id="illustrationDisplay">
+        <img src='./images/Illus_01.png' alt='Image 10'>
+        <img src='./images/Illus_02.png' alt='Image 11'>
+        <img src='./images/Illus_03.png' alt='Image 12'>
+      </div>
+
+      <div id="portfolioWindow" class="portfolioWindow">
+        <video controls>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>      
+    </div>
+
+    <div id="contactFormContainer" class="container">
+      <h1>Contact Me</h1>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+  
+        <button type="submit" id="sendButton">CONTACT ME</button>
+      </form>
+      <div id="successMessage"></div>
+    </div>
+
+    <div id="cesiumContainer" class="fullSize"></div>
+    
+    <canvas id="canvasOverlay"></canvas>
+
+    <script src="homePage.js"></script>
+    <script src="labPage.js"></script>
+    <script src="aboutPage.js"></script>
+    <script src="contactPage.js"></script>
+    <script src="locations.js"></script>
+    <script src="fetchWeatherData.js"></script>
+    <script src="weatherEffects.js"></script>
+    <script src="trafficAnimations.js"></script>
+    <script src="main.js"></script>
+    
+    <footer>
+    </footer>
+
+</body>
+</html>

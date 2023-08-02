@@ -1,0 +1,502 @@
+#JeremyRaven {
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: white;
+  position: absolute; /* Add this line */
+  z-index: 9999;
+  top: 115px; /* Adjust this value to move it down */
+  left: 50px; /* Adjust this value to position it horizontally */
+}
+
+#Skills {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: white;
+  position: absolute; /* Add this line */
+  z-index: 9999;
+  top: 190px; /* Adjust this value to move it down */
+  left: 50px; /* Adjust this value to position it horizontally */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 1.0));
+}
+
+#HomeBlurb {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(205, 202, 202);
+  position: absolute;
+  top: 50%; /* Adjust the desired vertical alignment */
+  left: 50%; /* Adjust the desired horizontal alignment */
+  transform: translate(-50%, -50%); /* Center the element */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+
+}
+
+#HomeBlurb .orange {
+  color: orange;
+}
+
+#techUsed {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+  top: 70%; /* Adjust the desired vertical alignment */
+  left: 73%; /* Adjust the desired horizontal alignment */
+  transform: translate(-50%, -50%); /* Center the element */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Add a transition effect for opacity */
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  position: relative;
+}
+
+header {
+  color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 170px;
+}
+
+footer {
+  color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 20px;
+  text-align: right;
+}
+
+#canvasOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0.5; /* Set the desired opacity value */
+  pointer-events: none; /* Make the canvas ignore mouse events */
+}
+
+#canvasMatter {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 9991;
+}
+
+.weatherAPI {
+  position: absolute;
+  right: 20px;
+  z-index: 9999;
+  width: auto;
+  height: 55px;
+  padding-left: 10px;
+  padding-right: 10px;
+  bottom: -50px;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  flex-direction: row-reverse; /* Reverse the order of flex items */
+}
+
+.weatherAPI-content {
+  display: flex;
+  align-items: center;
+  color: rgb(179, 176, 176);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  gap: 10px;
+}
+
+.weatherAPI-content img {
+  width: 50px;
+  height: auto;
+}
+
+#location {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+#conditionText1,
+#conditionText2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.navbar {
+  background-color: black;
+  padding: 0px;
+  position: absolute; /* Add this line */
+  z-index: 9999;
+  top: 130px; /* Adjust this value to move it down */
+  left: 500px; /* Adjust this value to position it horizontally */
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  margin-left: 20px;
+}
+
+.email-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: rgb(82, 81, 81);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: color 1.0s;
+  position: absolute; /* Add this line */
+  top: 130px; /* Adjust this value to move it down */
+  right: 10px; /* Adjust this value to position it horizontally */
+}
+
+.email-link:hover {
+  color: rgb(196, 195, 195);
+}
+
+#cesiumContainer {
+  position: relative;
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  z-index: 1;
+}
+
+.cesium-viewer-bottom {
+  display: none;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  color: rgb(144, 141, 141);
+  position: absolute;
+  top: 25%; /* Adjust the top value to move the contact div off-screen */
+  left: 50px;
+  transform: scaleY(0);
+  width: 600px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  z-index: 10000;
+  transition: transform 0.5s ease-in-out;
+}
+
+.homeContainer {
+  position: absolute;
+  top: 100px;
+  left: 145px;
+  opacity: 0.0;
+  width: 2000px; /* Adjust the desired width */
+  height: 600px; /* Adjust the desired height */
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px;
+  z-index: 10000;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.aboutContainer {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: rgb(254, 252, 252);
+  background-color: rgba(0, 0, 0, 0.5); 
+  position: absolute;
+  top: 25%;
+  left: 50px;
+  transform: scaleY(0);
+  width: 400px;
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  z-index: 10000;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.labContainer {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: rgb(254, 252, 252);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 25%;
+  left: 50px;
+  transform: scaleY(0);
+  width: 400px;
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  z-index: 10000;
+  border-radius: 10px 0 0 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.labButtons {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  position: absolute;
+  color: rgb(170, 170, 170);
+  right: -30px; /* Adjust this value to control the distance from the right edge */
+  top: 0;
+  height: 150px;
+  width: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the background color to dark grey */
+  transform: translateY(calc(152px * var(--index)));
+  writing-mode: vertical-lr; /* Set the text direction to vertical */
+  white-space: nowrap; /* Prevent text from wrapping */
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect for background-color and color */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.labButtons:hover {
+  background-color: rgba(93, 93, 93, 0.5); /* Set the background color to dark grey */
+  color: white; /* Set the text color to white on hover */
+}
+
+.labButtons.highlighted {
+  background-color: rgba(252, 152, 2, 0.9); /* Set the background color to dark grey */
+  color: white;
+  box-shadow: none; /* Remove the inner drop shadow for the highlighted button */
+}
+
+.labButtons:nth-child(1) {
+  --index: 0;
+}
+
+.labButtons:nth-child(2) {
+  --index: 1;
+}
+
+.labButtons:nth-child(3) {
+  --index: 2;
+}
+
+.labButtons:nth-child(4) {
+  --index: 3;
+}
+
+.imageDisplay {
+  background-color: rgb(252, 252, 252); /* Set the color of the scrollbar thumb */
+  height: 550px; /* Adjust the height as per your requirement */
+  overflow-y: scroll; /* Always show the vertical scrollbar */
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: transparent transparent; /* Set the color of the scrollbar */
+}
+
+/* For WebKit browsers (e.g., Chrome, Safari) */
+.imageDisplay::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+.imageDisplay::-webkit-scrollbar-thumb {
+  background-color: rgb(121, 120, 120); /* Set the color of the scrollbar thumb */
+}
+
+.imageDisplay::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0); /* Set the color of the scrollbar track */
+}
+
+.imageDisplay img {
+  display: block;
+  margin-bottom: 2px; /* Add spacing between the images */
+  width: 400px;
+}
+
+.portfolioWindow {
+  position: relative;
+  top: -100%;
+  left: 550px;
+  transform: scaleY(0);
+  display: inline-block;
+  height: auto;
+  background-color: none;
+  padding: none;
+  z-index: 10000;
+  border: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container textarea {
+  height: 200px;
+}
+
+.container input[type="text"] {
+  width: 100%; /* Stretch the text fields to fit within the container */
+  background-color: rgba(255, 255, 255, 0.1); /* Set the background color to dark grey */
+  color: rgb(200, 198, 198); /* Set the text color to white */
+  border: none;
+}
+
+.logoContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 25%;
+  left: 600px; /* Adjust the left position based on your needs */
+  transform: scaleY(0%);
+  width: 55%; /* Adjust the width based on your needs */
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 10000;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+
+  /* Apply Flexbox properties to organize logos in a grid */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.image-button {
+  position: relative;
+  display: inline-block;
+}
+
+.logo {
+  width: 100px; /* Adjust the size of the logo image */
+  padding: 20px;
+}
+
+.popup {
+  position: absolute;
+  top: -130px; /* Adjust the distance of the popup from the button */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  text-align: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+.popup .speech-bubble {
+  width: 150px; /* Adjust the width of the speech bubble image */
+}
+
+.popup .speech-bubble > img {
+  width: 150px; /* Adjust the width of the speech bubble image */
+  opacity: 0.7; /* Adjust the opacity value for semi-transparency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Adjust the shadow properties */
+}
+
+.popup .speechText {
+  margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-button:hover .popup {
+  display: block;
+}
+
+.image-button:hover {
+  filter: brightness(130%); /* Adjust the color highlight */
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: left;
+  color: white;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Set the background color to dark grey */
+  color: rgb(200, 198, 198); /* Set the text color to white */
+  border: none;
+}
+
+form button {
+  background-color: #ff9d00;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#successMessage {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #d4d4d2;
+}
+
+#mouseImage {
+  position: absolute;
+  top: 85%;
+  left: 40%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s ease-in-out; /* Add a transition effect for opacity */
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 1s ease-in-out;
+
+}
+
+.visible {
+  transform: scaleY(100%);
+}
+
+.HomeVisible {
+  opacity: 1.0;
+}
+
+.custom-button {
+  background-color: black;
+  color: rgb(82, 81, 81);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: color 1.0s;
+}
+
+.custom-button:hover {
+  color: rgb(196, 195, 195);
+}
+
+.hidden {
+  display: none;
+}
